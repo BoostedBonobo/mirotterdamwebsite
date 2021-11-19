@@ -1,7 +1,4 @@
-import {updateSlider} from "./attribute-editor/ElementSizeSlider.js";
-import {setChosenElement} from "./attribute-editor/ColorChooser.js";
-
-const attributeMenuButton = document.getElementById('attribute-menu-button')
+import {hideElementEditor, showElementEditor} from "./attribute-editor/AttributeEditor.js";
 
 let selectedElement
 
@@ -11,17 +8,15 @@ const selectElement = e => {
 
     selectedElement = e.target
     selectedElement.classList.add('selected')
-    attributeMenuButton.disabled = false
-    updateSlider()
-    setChosenElement(e.target)
+    showElementEditor(selectedElement)
 }
 
 const unselectElement = e => {
     if (!selectedElement) return // if an element has not been selected, do nothing
 
+    hideElementEditor()
     selectedElement.classList.remove('selected')
     selectedElement = undefined
-    attributeMenuButton.disabled = true
 }
 
 export function CanvasElement(canvas, element, width) {

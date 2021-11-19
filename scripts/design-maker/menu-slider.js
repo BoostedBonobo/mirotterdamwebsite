@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById('canvas')
 
 // element menu
@@ -18,29 +17,5 @@ canvas.addEventListener('click', e => {
     if (isElementMenuShown) {
         elementMenuAnimation.reverse()
         isElementMenuShown = !isElementMenuShown
-    }
-})
-
-// attribute editor
-const elementEditorButton = document.getElementById('attribute-menu-button')
-let isElementEditorShown = false
-const elementEditorAnimation = gsap.timeline()
-elementEditorAnimation.to('.element-editor', {duration: 0.2, top: 0})
-elementEditorAnimation.pause()
-
-elementEditorButton.addEventListener('click', e => {
-    if (!isElementEditorShown) {
-        elementEditorAnimation.play()
-        isElementEditorShown = !isElementEditorShown
-    } else {
-        elementEditorAnimation.reverse()
-        isElementEditorShown = !isElementEditorShown
-    }
-})
-
-canvas.addEventListener('click', e => {
-    if (isElementEditorShown) {
-        elementEditorAnimation.reverse()
-        isElementEditorShown = !isElementEditorShown
     }
 })
