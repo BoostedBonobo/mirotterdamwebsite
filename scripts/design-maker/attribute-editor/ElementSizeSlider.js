@@ -3,7 +3,7 @@ import {getSelectedElement} from "../utils/getSelectedElement.js";
 const slider = document.getElementById('scale-slider')
 let selectedElement;
 
-export function Slider(imageWidth, imageMargin) {
+export function SizeSlider(imageWidth, imageMargin) {
     slider.min = imageWidth - imageMargin
     slider.max = imageWidth + imageMargin
 

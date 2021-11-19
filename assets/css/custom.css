@@ -208,8 +208,8 @@ h2 {
     background-image: url("../icons/add.png");
 }
 
-.option-button.attribute-menu-button {
-    background-image: url("../icons/menu.png");
+.option-button.delete-button {
+    background-image: url("../icons/trash.png");
 }
 
 .option-button.ok-button {
