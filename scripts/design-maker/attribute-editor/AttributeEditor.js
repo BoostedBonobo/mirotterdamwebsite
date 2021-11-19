@@ -26,8 +26,7 @@ export function AttributeEditor() {
         const chosenAttribute = e.target
 
         const highlightedAttrButton = document.querySelector('.editor-attribute-choices .highlighted')
-        if (highlightedAttrButton !== chosenAttribute)
-        {
+        if (highlightedAttrButton !== chosenAttribute) {
             chosenAttribute.classList.add('highlighted')
             highlightedAttrButton.classList.remove('highlighted')
         }

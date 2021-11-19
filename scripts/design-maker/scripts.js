@@ -6,7 +6,7 @@ import {AttributeEditor, hideElementEditor, showElementEditor} from "./attribute
 import {SizeSlider} from "./attribute-editor/ElementSizeSlider.js"
 
 import {ButtonsRow} from "./buttons/ButtonsRow.js";
-import {toggleEnabled as toggleDeleteButton} from "./buttons/Trash.js";
+import {toggleEnabled as toggleDeleteButton} from "./buttons/Delete.js";
 
 const canvas = document.getElementById('canvas')
 const canvasImageWidth = 100

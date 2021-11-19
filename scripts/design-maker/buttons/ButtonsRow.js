@@ -1,5 +1,5 @@
 import {showLibraryMenu} from "./Add.js";
-import {deleteElement} from "./Trash.js";
+import {deleteElement} from "./Delete.js";
 
 import {getSelectedElement} from "../utils/getSelectedElement.js";
 
