@@ -11,7 +11,7 @@ import {BottomMenu} from "./buttons/BottomMenu.js";
 canvas.setImage(canvas.canvas) // Sets the canvas image
 
 loadElements( // Loads element-library with elements, and sets click events on each element to show them on canvas
-    element => canvas.addElement(element, canvas.imageWidth, canvas.elementSelect))
+    element => canvas.addElement(element, canvas.imageWidth, canvas.selectElement))
 
 AttributeEditor() // Initializes the attribute-editor menu
 SizeSlider(canvas.imageWidth, 50) // Initializes size-slider

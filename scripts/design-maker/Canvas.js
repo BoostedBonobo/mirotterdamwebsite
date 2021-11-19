@@ -21,7 +21,7 @@ export function addElement(element, width, onSelect) {
 // events
 let selectedElement;
 
-export const elementSelect = e => { // event for selecting element
+export const selectElement = e => { // event for selecting element
     if (selectedElement) return
     e.preventDefault()
 
@@ -32,7 +32,7 @@ export const elementSelect = e => { // event for selecting element
     showElementEditor(selectedElement)
 }
 
-export const elementDeSelect = () => { // event for unselecting element
+export const deSelectElement = () => { // event for unselecting element
     if (!selectedElement) return
 
     selectedElement.classList.remove('selected')
@@ -41,7 +41,15 @@ export const elementDeSelect = () => { // event for unselecting element
     selectedElement = undefined
 }
 
-canvas.addEventListener('click', elementDeSelect)
+canvas.addEventListener('click', deSelectElement)
+
+// screenshotting
+export default function screenshot() {
+    deSelectElement() // makes sure to hide all menus and deselect element before screenshotting
+
+    html2canvas(canvas, {logging: false})
+        .then(canvas => Canvas2imageMin.saveAsPNG(canvas, undefined, undefined, 'canvas'))
+}
 
 // set image
 export function setImage(canvas) {// get query string parameter
