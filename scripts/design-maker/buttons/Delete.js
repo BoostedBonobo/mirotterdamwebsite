@@ -1,4 +1,4 @@
-const button = document.getElementById('delete-button')
+export const deleteButton = document.getElementById('delete-button')
 
 let selectedElement;
 
@@ -9,5 +9,5 @@ export function deleteElement() {
 export function toggleEnabled(element) {
     if (element) selectedElement = element
 
-    button.disabled = !button.disabled
+    deleteButton.disabled = !deleteButton.disabled
 }

@@ -1,8 +1,10 @@
+import {canvas} from "../Canvas.js";
+
+export const elementsMenuButton = document.getElementById('elements-menu-button')
+
 const elementMenuAnimation = gsap.timeline() // animation
 elementMenuAnimation.to('.elements-menu-container', {duration: 0.2, left: 0})
 elementMenuAnimation.pause()
-
-const canvas = document.getElementById('canvas')
 
 let menuIsShown = false
 
