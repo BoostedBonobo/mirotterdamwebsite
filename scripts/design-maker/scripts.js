@@ -5,8 +5,8 @@ import {createCanvasElement} from "./CanvasElement.js"
 import {AttributeEditor, hideElementEditor, showElementEditor} from "./attribute-editor/AttributeEditor.js"
 import {SizeSlider} from "./attribute-editor/ElementSizeSlider.js"
 
-import {ButtonsRow} from "./buttons/ButtonsRow.js";
-import {toggleEnabled as toggleDeleteButton} from "./buttons/Delete.js";
+import {deleteElement, toggleEnabled as toggleDeleteButton} from "./buttons/Delete.js";
+import {showLibraryMenu} from "./buttons/Add.js";
 
 const canvas = document.getElementById('canvas')
 const canvasImageWidth = 100
@@ -16,25 +16,23 @@ setCanvasImage(canvas) // Sets the canvas image
 AttributeEditor() // Initializes the attribute-editor header menu
 SizeSlider(canvasImageWidth, 50) // Initializes SizeSlider
 
-ButtonsRow() // Initializes all the buttons in the bottom row
-
 loadElements( // Loads element-library with elements, and sets click events on each element to show them on canvas
-    element => createCanvasElement(canvas, element, canvasImageWidth, canvasElementOnSelect))
+    element => createCanvasElement(canvas, element, canvasImageWidth, canvasElementSelect))
 
 let selectedElement;
 
-const canvasElementOnSelect = e => { // event for selecting element
+const canvasElementSelect = e => { // event for selecting element
     if (selectedElement) return
     e.preventDefault()
 
     selectedElement = e.target
 
     selectedElement.classList.add('selected')
-    toggleDeleteButton()
+    toggleDeleteButton(selectedElement)
     showElementEditor(selectedElement)
 }
 
-const canvasElementOnDeselect = () => { // event for unselecting element
+const canvasElementDeSelect = () => { // event for unselecting element
     if (!selectedElement) return
 
     selectedElement.classList.remove('selected')
@@ -43,4 +41,14 @@ const canvasElementOnDeselect = () => { // event for unselecting element
     selectedElement = undefined
 }
 
-canvas.addEventListener('click', canvasElementOnDeselect)
+canvas.addEventListener('click', canvasElementDeSelect)
+
+// Bottom Buttons
+document.getElementById('elements-menu-button').addEventListener('click', () => {
+    showLibraryMenu()
+})
+
+document.getElementById('delete-button').addEventListener('click', () => {
+    canvasElementDeSelect()
+    deleteElement()
+})
