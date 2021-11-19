@@ -52,7 +52,7 @@ export default function screenshot() {
 }
 
 // set image
-export function setImage(canvas) {// get query string parameter
+export function setImage() {// get query string parameter
     const locationId = getLocationId() || 5 // default location id of 5 for testing
     canvas.style.backgroundImage = `url('assets/img/location_images/L-${locationId}.png')`
 }

@@ -8,7 +8,7 @@ import {SizeSlider} from "./attribute-editor/ElementSizeSlider.js"
 import {BottomMenu} from "./buttons/BottomMenu.js";
 
 
-canvas.setImage(canvas.canvas) // Sets the canvas image
+canvas.setImage() // Sets the canvas image
 
 loadElements( // Loads element-library with elements, and sets click events on each element to show them on canvas
     element => canvas.addElement(element, canvas.imageWidth, canvas.selectElement))
