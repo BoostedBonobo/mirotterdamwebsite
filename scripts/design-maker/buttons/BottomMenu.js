@@ -1,4 +1,4 @@
-import {deSelectElement} from "../Canvas.js";
+import {deSelectElement} from "../canvas/Canvas.js";
 
 import {elementsMenuButton, showElementsMenu} from "./ElementsMenu.js";
 import {deleteButton, deleteElement} from "./Delete.js";

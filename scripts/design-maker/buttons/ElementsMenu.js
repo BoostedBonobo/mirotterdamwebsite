@@ -1,4 +1,4 @@
-import {canvas} from "../Canvas.js";
+import {canvas} from "../canvas/Canvas.js";
 
 export const elementsMenuButton = document.getElementById('elements-menu-button')
 
