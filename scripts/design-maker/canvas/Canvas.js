@@ -5,17 +5,25 @@ export const canvas = document.getElementById('canvas')
 export const imageWidth = 100
 
 // add element to canvas
-export function addElement(element, width, onSelect) {
+export function addElement(element) {
     const img = element.cloneNode(true)
+
     img.id = 'obj' + Math.floor(Math.random() * 99) // assign random id to object
-    img.width = width;
+    img.width = imageWidth
+    // place image in the middle of the canvas
+    img.style.transform =
+        `translate3d(${canvas.offsetWidth / 2 - imageWidth / 2}px, ${canvas.offsetHeight / 2 - imageWidth / 2}px, 0px)`
+
     canvas.appendChild(img)
 
-    Draggable.create(`#canvas > img#${img.id}`, {
+    const canvasElement = Draggable.create(`#canvas > img#${img.id}`, {
         type: 'x,y',
         bounds: '#canvas',
-        onClick: onSelect
-    })
+        onClick: selectElement
+    })[0].target
+
+    // force click event upon creation to select the element
+    // canvasElement.dispatchEvent(new Event('click'))
 }
 
 // events

@@ -1,6 +1,8 @@
 import {deSelectElement} from "../canvas/Canvas.js";
 
-import {elementsMenuButton, showElementsMenu} from "./ElementsMenu.js";
+import {elementsMenuButton} from "./ElementsMenu.js";
+import {showElementsMenu} from "../elements-library/animation.js";
+
 import {deleteButton, deleteElement} from "./Delete.js";
 import {submitButton, submitImage} from "./Submit.js";
 

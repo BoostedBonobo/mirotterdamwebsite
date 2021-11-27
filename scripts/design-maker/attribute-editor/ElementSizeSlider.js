@@ -1,5 +1,3 @@
-import {getSelectedElement} from "../utils/getSelectedElement.js";
-
 const slider = document.getElementById('scale-slider')
 let selectedElement;
 
