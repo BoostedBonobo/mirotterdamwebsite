@@ -10,3 +10,7 @@
 # RewriteRule . /index.php [L]
 # </IfModule>
 DirectoryIndex index
+RewriteEngine On
+RewriteRule ^admin/?$ /admin/login.php [L,NC]
+# Redirect 301 "/admin" "https://mirotterdam.websitejan.nl/admin/login.php"
+# Redirect /admin https://mirotterdam.websitejan.nl/admin/login.php 

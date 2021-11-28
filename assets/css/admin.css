@@ -1,0 +1,86 @@
+
+.logindiv {
+    background-color: lightgrey;
+    width: 175px;
+    padding: 50px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+
+}
+.header{
+    background-color: lightgrey;
+    width: auto;
+    padding: 5px;
+    border: 2px solid black;
+}
+.tekstblok{
+    background-color: lightgrey;
+    width: 300px;
+    height: 60px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    top: 130px;
+    position: absolute;
+}
+.tekstblok1{
+    background-color: lightgrey;
+    width: 300px;
+    height: 60px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    top: 130px;
+    position: absolute;
+    left: 316px;
+}
+.tekstblok2{
+    background-color: lightgrey;
+    width: 300px;
+    height: 60px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    top: 130px;
+    position: absolute;
+    left: 624px;
+}
+.locaties{
+    background-color: lightgrey;
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    top: 230px;
+    position: absolute;
+}
+.locaties2{
+    background-color: lightgrey;
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    left: 316px;
+    top: 230px;
+    position: absolute;
+}
+.locaties3{
+    background-color: lightgrey;
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    left: 624px;
+    top: 230px;
+    position: absolute;
+}
