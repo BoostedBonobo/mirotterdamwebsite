@@ -5,7 +5,7 @@ html, body {
     font: 14px "Open Sans", Arial, sans-serif;
 }
 
-h2 {
+.design-maker.h2 {
     font-size: 1.7em;
     padding-left: 30px;
     font-family: Lato, sans-serif;
@@ -138,14 +138,49 @@ h2 {
     background-color: rgba(144, 238, 144, 0.95);
 }
 
-.elements-menu-container .elements-menu {
+.elements-menu-container > div {
     border-top: 5px solid rgba(0, 0, 0, 0.3);
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.theme-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.theme-picker .theme {
+    height: 100%;
+    background-color: #add8e6;
+    border-radius: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.theme-picker img {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.theme-picker .theme-name {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 1.25em;
+    align-self: end;
+    color: midnightblue;
+}
+
+.elements-menu-container .elements-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
+    align-items: center;
 }
 
 .elements-menu-container .elements-menu img {

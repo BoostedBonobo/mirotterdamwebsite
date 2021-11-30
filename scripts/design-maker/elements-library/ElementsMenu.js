@@ -1,4 +1,4 @@
-const files = ['Bloem1.png', 'Bloem2.png', 'Bloem3.png', 'Bloem4.png', 'Bloem5.png']
+const files = ['Bloem1.png', 'Bloem2.png', 'Bloem3.png', 'Picknick.png', 'Basketbal.png']
 
 export const ElementsMenu = {
     loadElements: loadElements
