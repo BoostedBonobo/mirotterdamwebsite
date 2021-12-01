@@ -92,12 +92,12 @@ $elements = include 'assets/php/elements.php';
   <section id="design" class="design" style="display:none;">
     <div class="element-editor" id="element-editor">
       <h2>Aanpassen</h2>
+
       <div class="editor-attribute-choices">
           <span id="choice-size" class="highlighted">Grootte</span>
           <span id="choice-color">Kleur</span>
           <span id="choice-mirror">Spiegelen</span>
       </div>
-
 
       <div class="attribute-editor">
           <div class="scale-slider-container shown" id="scale-slider-container">
@@ -105,31 +105,56 @@ $elements = include 'assets/php/elements.php';
                   <input type="range" class="scale-slider" id="scale-slider">
               </label>
           </div>
-          <!--This inline styling is used for a javascript function -->
-          <!--This way, the CSS 'filter' property can be extracted from these button via the JS 'style' property, which would not be possible when using CSS classes -->
+
           <div class="color-choices-container" id="color-choices-container">
-            <button style="filter: hue-rotate(40deg)"></button>
-            <button style="filter: hue-rotate(90deg)"></button>
-            <button style="filter: hue-rotate(150deg)"></button>
-            <button style="filter: hue-rotate(270deg)"></button>
-            <button style="filter: hue-rotate(240deg)"></button>
-            <button style="filter: hue-rotate(180deg)"></button>
+  <!--        This inline styling is used for a javascript function -->
+  <!--        This way, the CSS 'filter' property can be extracted from these button via the JS 'style' property,
+              which would not be possible when using CSS classes -->
+              <button style="filter: hue-rotate(40deg)"></button>
+              <button style="filter: hue-rotate(90deg)"></button>
+              <button style="filter: hue-rotate(150deg)"></button>
+              <button style="filter: hue-rotate(270deg)"></button>
+              <button style="filter: hue-rotate(240deg)"></button>
+              <button style="filter: hue-rotate(180deg)"></button>
           </div>
       </div>
-  </div>
+    </div>
 
-  <div class="elements-menu-container">
-      <h2>Bibliotheek</h2>
-      <div class="elements-menu" id="elements-menu"></div>
-  </div>
+    <div class="elements-menu-container">
+        <h2>Bibliotheek</h2>
 
-  <div id="canvas" class="canvas"></div>
+        <div class="elements-menu" id="elements-menu"></div>
 
-  <div class="options" id="options">
-      <button class="option-button elements-menu-button" id="elements-menu-button"></button>
-      <button class="option-button delete-button" id="delete-button" disabled></button>
-      <button class="option-button ok-button" id="ok-button" class="saveimage" onclick="saveConcept()"></button>
-  </div>
+        <div style="display: none" class="theme-picker" id="theme-picker">
+            <div class="theme groen">
+                <img src="assets/elements/Boom.png" alt="">
+                <div class="theme-name">Groen</div>
+            </div>
+
+            <div class="theme spel-sport">
+                <img src="assets/elements/Basketbal.png" alt="">
+                <div class="theme-name">Spel & Sport</div>
+            </div>
+
+            <div class="theme ontspanning">
+                <img src="assets/elements/Picknick.png" alt="">
+                <div class="theme-name">Ontspanning</div>
+            </div>
+
+            <div class="theme veilig">
+                <img src="assets/elements/Boom.png" alt="">
+                <div class="theme-name">Veilig</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="canvas" class="canvas"></div>
+
+    <div class="options" id="options">
+        <button class="option-button elements-menu-button" id="elements-menu-button"></button>
+        <button class="option-button delete-button" id="delete-button" disabled></button>
+        <button class="option-button ok-button" id="ok-button" class="saveimage" onclick="saveConcept()"></button>
+    </div>
 
   </section><!-- End Design Section -->
 
@@ -199,7 +224,7 @@ $elements = include 'assets/php/elements.php';
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/Draggable.min.js"></script>
 
-  <script src="assets/js/design-maker/menu-slider.js"></script>
+  <script src="assets/js/design-maker/elements-library/ElementsMenu.js"></script>
   <script type="module" src="assets/js/design-maker/scripts.js"></script>
   <!--scripts-->
 

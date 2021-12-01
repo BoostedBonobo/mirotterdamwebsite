@@ -1,7 +1,10 @@
-export function loadElements(elementOnClick) {
-    const files = elements_array;
+const files = elements_array;
 
+export const ElementsMenu = {
+    loadElements: loadElements
+}
 
+function loadElements(elementOnClick) {
     files.forEach(file => {
         // adds images to menu
         let image = document.createElement('img')
@@ -12,4 +15,3 @@ export function loadElements(elementOnClick) {
         image.addEventListener('click', (e) => elementOnClick(e.target))
     })
 }
-
