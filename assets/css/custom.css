@@ -5,11 +5,11 @@ html, body {
     font: 14px "Open Sans", Arial, sans-serif;
 }
 
-.design-maker h2 {
+.design h2 {
     font-size: 1.7em;
-    padding-left: 30px;
     font-family: Lato, sans-serif;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0 0.5em 20px;
+    color: black;
 }
 
 /*<=== Attribute Editor ===>*/
@@ -127,7 +127,7 @@ html, body {
 
 /* <=== Element Library ===>*/
 .elements-menu-container {
-    left: -125%;
+    /*left: -125%;*/
     position: absolute;
     height: 100%;
     width: 85%;
@@ -155,62 +155,41 @@ html, body {
     color: #191970;
 }
 
-.theme-picker .theme-button {
+.theme-picker .theme-container {
     width: 100%;
-    background-color: white;
-    border-radius: 0.25em;
-    padding: 10px;
-    box-sizing: border-box;
     display: grid;
     grid-template-rows: 1fr auto;
     margin-bottom: 15%;
-    border: 1px solid black;
 }
 
-.theme-menu {
-    display: none;
-    margin-top: 5%;
+.theme-menu-dropdown {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
     align-items: center;
-}
-
-.theme-menu.shown {
-    display: grid;
-}
-
-.theme-menu img {
-    width: 100%;
-    max-height: 125px;
-    object-fit: scale-down;
-}
-
-/* Arrow Pointing Down */
-.theme-picker .theme-name::after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
+    background-color: #f8f9fa;
+    border-radius: 0.25em;
 }
 
 .theme-picker img {
     width: 100%;
     align-self: center;
     justify-self: center;
+    max-height: 125px;
+    object-fit: scale-down;
+    padding: 4px;
 }
 
-.theme-picker .theme-name {
+.theme-picker button {
     text-align: center;
     font-family: Lato, sans-serif;
     font-size: 1.25em;
     align-self: end;
     color: #191970;
+    background-color: white;
+    width: 80%;
+    justify-self: center;
+    margin-bottom: 2.5%;
 }
 
 /* <=== END Element Library ===>*/

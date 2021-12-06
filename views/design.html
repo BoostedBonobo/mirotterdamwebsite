@@ -15,9 +15,9 @@
         </div>
 
         <div class="color-choices-container" id="color-choices-container">
-<!--        This inline styling is used for a javascript function -->
-<!--        This way, the CSS 'filter' property can be extracted from these button via the JS 'style' property,
-            which would not be possible when using CSS classes -->
+            <!--        This inline styling is used for a javascript function -->
+            <!--        This way, the CSS 'filter' property can be extracted from these button via the JS 'style' property,
+                        which would not be possible when using CSS classes -->
             <button style="filter: hue-rotate(40deg)"></button>
             <button style="filter: hue-rotate(90deg)"></button>
             <button style="filter: hue-rotate(150deg)"></button>
@@ -26,40 +26,50 @@
             <button style="filter: hue-rotate(180deg)"></button>
         </div>
     </div>
-  </div>
+</div>
 
-  <div class="elements-menu-container">
-      <h2>Bibliotheek</h2>
+<div class="elements-menu-container">
+    <h2>Bibliotheek</h2>
 
-      <div class="elements-menu" id="elements-menu"></div>
+    <div class="theme-picker" id="theme-picker">
+        <h3>Wat wil jij toevoegen aan jouw omgeving?</h3>
 
-      <div style="display: none" class="theme-picker" id="theme-picker">
-          <div class="theme-button groen">
-              <img src="assets/elements/Boom.png" alt="">
-              <div class="theme-name">Groen</div>
-          </div>
+        <div class="theme-container spel-sport">
+            <button class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu-spelsport"
+                    aria-expanded="false">
+                Spel & Sport
+            </button>
+            <div class="theme-menu-dropdown collapse" id="menu-spelsport"></div>
+        </div>
 
-          <div class="theme-button spel-sport">
-              <img src="assets/elements/Basketbal.png" alt="">
-              <div class="theme-name">Spel & Sport</div>
-          </div>
+        <div class="theme-container groen">
+            <button class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu-groen" aria-expanded="false">
+                Groen
+            </button>
+            <div class="theme-menu-dropdown collapse" id="menu-groen"></div>
+        </div>
 
-          <div class="theme-button ontspanning">
-              <img src="assets/elements/Picknick.png" alt="">
-              <div class="theme-name">Ontspanning</div>
-          </div>
+        <div class="theme-container ontspanning">
+            <button class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu-ontspanning"
+                    aria-expanded="false">
+                Ontspanning
+            </button>
+            <div class="theme-menu-dropdown collapse" id="menu-ontspanning"></div>
+        </div>
 
-          <div class="theme-button veilig">
-              <img src="assets/elements/Boom.png" alt="">
-              <div class="theme-name">Veilig</div>
-          </div>
-      </div>
-  </div>
+        <div class="theme-container veilig">
+            <button class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu-veilig" aria-expanded="false">
+                Veilig
+            </button>
+            <div class="theme-menu-dropdown collapse" id="menu-veilig"></div>
+        </div>
+    </div>
+</div>
 
-  <div id="canvas" class="canvas"></div>
+<div id="canvas" class="canvas"></div>
 
-  <div class="options" id="options">
-      <button class="option-button elements-menu-button" id="elements-menu-button"></button>
-      <button class="option-button delete-button" id="delete-button" disabled></button>
-      <button class="option-button ok-button" id="ok-button" class="saveimage" onclick="saveConcept()"></button>
-  </div>
+<div class="options" id="options">
+    <button class="option-button elements-menu-button" id="elements-menu-button"></button>
+    <button class="option-button delete-button" id="delete-button" disabled></button>
+    <button class="option-button ok-button" id="ok-button" class="saveimage" onclick="saveConcept()"></button>
+</div>
