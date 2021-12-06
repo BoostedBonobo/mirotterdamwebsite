@@ -84,6 +84,7 @@ html, body {
     background-position: center;
     background-color: transparent;
 }
+
 /* <=== END Color Editor ===> */
 
 /* <=== Scale Slider ===> */
@@ -120,13 +121,14 @@ html, body {
     background: #04AA6D;
     cursor: pointer;
 }
+
 /* <=== END Scale Slider ===> */
 /*<=== END Attribute Editor ===>*/
 
 /* <=== Element Library ===>*/
 .elements-menu-container {
     position: absolute;
-    left: -125%;
+    /*left: -125%;*/
     height: 100%;
     width: 85%;
     border-right: 2px solid black;
@@ -136,6 +138,8 @@ html, body {
     box-sizing: border-box;
     z-index: 9999;
     background-color: rgba(144, 238, 144, 0.95);
+    display: flex;
+    flex-direction: column;
 }
 
 .elements-menu-container > div {
@@ -143,23 +147,42 @@ html, body {
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
-    grid-gap: 10px;
-    align-items: center;
 }
 
 .theme-picker {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+}
+
+.theme-picker h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+    color: #191970;
 }
 
 .theme-picker .theme {
-    height: 100%;
-    background-color: #add8e6;
-    border-radius: 25px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.25em;
     padding: 10px;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 1fr auto;
+    margin-bottom: 15%;
+    border: 1px solid black;
+}
+
+/* Arrow Pointing Down */
+.theme-picker .theme-name::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
 }
 
 .theme-picker img {
@@ -173,7 +196,7 @@ html, body {
     font-family: Lato, sans-serif;
     font-size: 1.25em;
     align-self: end;
-    color: midnightblue;
+    color: 	#191970;
 }
 
 .elements-menu-container .elements-menu {
@@ -188,6 +211,7 @@ html, body {
     max-height: 125px;
     object-fit: scale-down;
 }
+
 /* <=== END Element Library ===>*/
 
 /*<=== Canvas ===>*/
@@ -210,6 +234,7 @@ html, body {
     padding: 5px;
     border-radius: 20px;
 }
+
 /*<=== END Canvas ===>*/
 
 /*<=== Option Buttons ===>*/
@@ -254,4 +279,5 @@ html, body {
 .option-button:disabled {
     background-color: #75816b;
 }
+
 /*<=== END Option Buttons ===>*/
