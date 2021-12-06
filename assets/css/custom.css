@@ -149,10 +149,6 @@ html, body {
     width: 100%;
 }
 
-.theme-picker {
-
-}
-
 .theme-picker h3 {
     font-size: 1.5rem;
     margin-bottom: 10%;
@@ -169,6 +165,20 @@ html, body {
     grid-template-rows: 1fr auto;
     margin-bottom: 15%;
     border: 1px solid black;
+}
+
+.theme-picker .theme-menu {
+    display: grid;
+    margin-top: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+    align-items: center;
+}
+
+.theme-menu img {
+    width: 100%;
+    max-height: 125px;
+    object-fit: scale-down;
 }
 
 /* Arrow Pointing Down */
@@ -196,7 +206,7 @@ html, body {
     font-family: Lato, sans-serif;
     font-size: 1.25em;
     align-self: end;
-    color: 	#191970;
+    color: #191970;
 }
 
 .elements-menu-container .elements-menu {
