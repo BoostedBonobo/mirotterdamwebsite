@@ -1,0 +1,58 @@
+
+<style>
+
+    .contact .container {
+        width: 90%;
+    }
+    .contact nav{
+        width:90%;
+        margin: auto;
+    }
+
+</style>   
+
+
+
+<!--     
+ <div class="section-title">
+      <h2>Contact</h2>
+      <h4>Bij het versturen zal de gemeente Rotterdam je ontwerp ontvangen.</h4>
+    </div> -->
+    <!-- <div class="gradient"></div> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            Bekijk je ontwerp
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <div id="storedScreenshot"></div> 
+            </ul>
+        </div>
+    </nav>
+    <div class="gradient"></div>
+    <form method="post" id="form" role="form" class="php-email-form" action="assets/php/mail.php">
+        <div class="container">
+        <input type="hidden" id="ontwerpid" name="ontwerp" value="0"></input>
+          <div class="row">
+            <div class="contactlabel form-group">
+              <label for="age"><h5> De gemeente Rotterdam zou graag je leeftijdsgroep willen weten (optioneel)</h5></label>
+              <select id="age">
+                <option value="0">Selecteer</option>
+                <option value="12-">Onder 12</option>
+                <option value="12-18">12-18</option>
+                <option value="18+">18+</option>
+              </select>
+            </div>
+            <div class="contactlabel">
+             <label for="email"><h5> Krijg het ontwerp gestuurd naar je mail (optioneel)</h5></label>
+             <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+            </div> 
+          </div>
+        <div class="text-center"><input id="endbutton" type="submit" class= "btn-thema-next" value="verstuur ontwerp" style="margin:20px;"></div>
+    </form>
+</div>
