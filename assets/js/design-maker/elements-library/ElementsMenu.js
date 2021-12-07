@@ -1,4 +1,4 @@
-const files = ['g-Bloem1.png', 'g-Bloem2.png', 'g-Bloem3.png', 'g-Bloem4.png', 'g-Boom.png'];
+const files = elements_array
 
 export const ElementsMenu = {
     loadElements: loadElements
@@ -6,17 +6,35 @@ export const ElementsMenu = {
 
 function loadElements(elementOnClick) {
     files.forEach(file => {
-        // adds images to menu
+        // creates HTML imag element
         let image = document.createElement('img')
         image.src = 'assets/elements/' + file
 
-        switch (file[0]) {
-            case 'g':
-                document.getElementById('menu-groen').appendChild(image)
-                break;
+        const filePrefix = file.split('-')[0]
+
+        let menu;
+        // Switch case for each theme. Looks at prefix of file and appends image element to correct menu
+        switch (filePrefix) {
+            case 'g':   // Thema Groen
+                menu = document.getElementById('menu-groen')
+                break
+            case 'ss':  // Thema Spel & Sport
+                menu = document.getElementById('menu-spelsport')
+                break
+            case 'v':   // Thema Veilig
+                menu = document.getElementById('menu-veilig')
+                break
+            case 'o':   // Thema Ontspanning
+                menu = document.getElementById('menu-ontspanning')
+                break
+            default:    // No/Unrecognized prefix
+                console.error(`Prefix of '${filePrefix}' in file-name '${file}' not recognized.`)
+                break
         }
 
-        // add image to canvas onclick
+        menu.appendChild(image) // Append image to correct menu
+
+        // onclick, adds this image to the canvas
         image.addEventListener('click', (e) => elementOnClick(e.target))
     })
 }
