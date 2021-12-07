@@ -4,6 +4,7 @@ export const ElementsMenu = {
     loadElements: loadElements
 }
 
+
 function loadElements(elementOnClick) {
     files.forEach(file => {
         // creates HTML imag element
@@ -38,3 +39,13 @@ function loadElements(elementOnClick) {
         image.addEventListener('click', (e) => elementOnClick(e.target))
     })
 }
+
+
+document.querySelectorAll('.theme-container button').forEach(button => {
+    button.addEventListener('click', e => {
+        const el = e.target
+
+        el.classList.toggle('btn-light')
+        el.classList.toggle('btn-primary')
+    })
+})

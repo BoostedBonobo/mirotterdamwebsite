@@ -83,7 +83,7 @@ $elements = include 'assets/php/elements.php';
           crossorigin="anonymous"></script>
 
   <!-- JS Files -->
-  <script src="assets/js/custom.js"></script>
+<!--  <script src="assets/js/custom.js"></script>-->
   <script src="assets/js/main.js"></script>
 
   <!--ontwerpen scripts-->
